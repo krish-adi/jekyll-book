@@ -1,0 +1,67 @@
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            {% if page.url == "/index.html" or page.url == "/" %}
+            <li
+                class="chapter active"
+                data-level="1.1"
+                data-path="{{site.baseurl}}"
+            >
+                {% else %}
+            </li>
+
+            <li class="chapter" data-level="1.1" data-path="{{site.baseurl}}">
+                {% endif %}
+                <a href="{{site.baseurl}}/index.html">
+                    {{ site.title | escape }}
+                </a>
+            </li>
+
+            <li class="divider"></li>
+
+            <!-- {% assign reversed_posts = site.posts | reverse %}
+
+            {% for post in reversed_posts %}
+                {% if page.url == post.url %}
+                <li class="chapter active" data-level="1.2" data-path="{{site.baseurl}}{{post.url}}">
+                {% else %}
+                <li class="chapter" data-level="1.1" data-path="{{site.baseurl}}{{post.url}}">
+                {% endif %}
+                    <a href="{{site.baseurl}}{{post.url}}">
+                        {{ post.title | escape }}
+                    </a>                    
+                </li>
+            {% endfor %} -->
+
+            {% for category in site.categories %}
+            <div class="archive-group">
+                {% capture category_name %}{{ category | first }}{% endcapture %}
+                <!-- <div id="#{{ category_name | slugize }}"></div> -->
+                <!-- <p></p> -->
+
+                <li class="chapter" data-level="1.1" data-path="{{site.baseurl}}/{{ category_name | slugize }}">
+                    <a href="{{site.baseurl}}/{{ category_name | slugize }}">
+                        {{ category_name }}
+                    </a>                    
+                </li>
+
+                <!-- <h3 class="category-head">{{ category_name }}</h3>
+                <a name="{{ category_name | slugize }}"></a>
+                {% for post in site.categories[category_name] %}
+                <article class="archive-item">
+                    <h4>
+                        <a href="{{ site.baseurl }}{{ post.url }}"
+                            >{{post.title}}</a
+                        >
+                    </h4>
+                </article>
+                {% endfor %} -->
+            </div>
+            {% endfor %}
+
+            <li class="divider"></li>
+        </ul>
+    </nav>
+</div>
+
+<!-- https://blog.webjeda.com/jekyll-categories/ -->

@@ -1,0 +1,11 @@
+---
+layout: home
+---
+
+{% assign reversed_posts = site.posts | reverse %} 
+
+{% for post in reversed_posts %} 
+<li class="chapter" data-level="1.1" data-path="{{site.baseurl}}{{post.url}}">
+    <a href="{{site.baseurl}}{{post.url}}"> {{ post.title | escape }} </a>
+</li>
+{% endfor %}

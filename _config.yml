@@ -1,0 +1,27 @@
+# Welcome to Jekyll!
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: Adithya Krishnan
+email: info@krishadi.com
+description: Blog of Adithya Krishnan. 
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com, https://user.github.io
+
+# Build settings
+
+# Permalinks
+permalink: /:categories/:title:output_ext
+
+exclude:
+    - _drafts
+
+plugins:
+  - jekyll-sitemap

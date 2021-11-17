@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+
+        {%- include head.html -%}
+
+        <!-- {% if page.previous %}
+            <link rel="prev" href="{{site.baseurl}}{{page.previous_in_category.url}}" />
+        {% else %}
+            <link rel="prev" href="{{site.baseurl}}/" />
+        {% endif %}
+
+        {% if page.next %}
+            <link rel="next" href="{{site.baseurl}}{{page.next_in_category.url}}" />
+        {% endif %} -->
+    </head>
+    <body>
+        <div class="book with-summary">
+
+            {%- include sidebar.html -%}
+
+            <div class="book-body">
+                {%- include body.html -%}
+
+                {% if page.previous %}
+                    <a href="{{site.baseurl}}{{page.previous_in_category.url}}" class="navigation navigation-prev navigation-unique" aria-label="Previous page: {{page.previous_in_category.title}}">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                {% else %}
+                    <a href="{{site.baseurl}}/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: {{site.title}}">
+                        &#60;
+                    </a>
+                {% endif %}
+
+                {% if page.next %}
+                    <a href="{{site.baseurl}}{{page.next_in_category.url}}" class="navigation navigation-next navigation-unique" aria-label="Next page: {{page.next_in_category.title}}">
+                        &#62;
+                    </a>
+                {% endif %}
+            </div>
+            
+        </div>
+
+        {%- include footer.html -%}
+
+    </body>
+</html>
