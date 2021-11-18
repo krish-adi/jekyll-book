@@ -2,9 +2,9 @@
     --summary-width: 200px;
     --page-max-width: 800px;
     --page-margin: 0 0;
-    --page-padding: 50px 15px 40px 60px;
+    --page-padding: 30px 25px 40px 60px;
+    --page-padding-md: 25px;
 }
-
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -63,18 +63,46 @@ body {
     bottom: 0;
     overflow-y: auto;
 }
-@media (max-width: 1240px) {
-    .book-body {
-        -webkit-transition: -webkit-transform 250ms ease;
-        -moz-transition: -moz-transform 250ms ease;
-        -o-transition: -o-transform 250ms ease;
-        transition: transform 250ms ease;
-        padding-bottom: 20px;
-    }
-    .book-body .body-inner {
-        position: static;
-        min-height: calc(100% - 50px);
-    }
+.body-header {
+    height: 50px;
+    padding: 0 20px;
+    font-size: 0.85em;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #7e888b;
+    background: 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+}
+.body-header .btn {
+    cursor: pointer;
+    height: 50px;
+    padding: 0 15px;
+    border-bottom: none;
+    color: #aaaaaa;
+    line-height: 50px;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    font-size: 16px;
+    text-decoration: none;
+}
+.body-header .btn:hover {
+    color: #333333;
+    background: 0 0;
+}
+.body-header .btn svg {
+    height: 14px;
+    fill: #aaaaaa;
+}
+.body-header .btn svg:hover {
+    fill: #333333;
+}
+.body-header .caption {
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 50px;
+    padding-left: 100px;
 }
 .page-wrapper {
     position: relative;
@@ -86,6 +114,11 @@ body {
     margin: var(--page-margin);
     padding: var(--page-padding);
 }
+@media (max-width: 768px) {
+    .page-inner {
+        padding: var(--page-padding-md);
+    }
+}
 .page-inner .btn-group .btn {
     border-radius: 0;
     background: #eee;
@@ -95,7 +128,7 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     position: absolute;
     top: 0;
-    left: -var(--summary-width);
+    left: calc(-1 * var(--summary-width));
     bottom: 0;
     z-index: 1;
     overflow-y: auto;
@@ -159,6 +192,11 @@ body {
     white-space: nowrap;
     position: relative;
 }
+.book-summary ul.summary li a svg {
+    margin-left: 5px;
+    height: 12px;
+    fill: #364149;
+}
 .book-summary ul.summary li a:hover {
     text-decoration: none;
 }
@@ -173,13 +211,6 @@ body {
 .book-summary ul.summary li ul {
     padding-left: 20px;
 }
-@media (max-width: 600px) {
-    .book-summary {
-        width: calc(100% - 60px);
-        bottom: 0;
-        left: -100%;
-    }
-}
 .book.with-summary .book-summary {
     left: 0;
 }
@@ -189,22 +220,8 @@ body {
     -o-transition: none !important;
     transition: none !important;
 }
-@media (min-width: 600px) {
-    .book.with-summary .book-body {
-        left: var(--summary-width);
-    }
-}
-@media (max-width: 600px) {
-    .book.with-summary {
-        overflow: hidden;
-    }
-    .book.with-summary .book-body {
-        -webkit-transform: translate(calc(100% - 60px), 0);
-        -moz-transform: translate(calc(100% - 60px), 0);
-        -ms-transform: translate(calc(100% - 60px), 0);
-        -o-transform: translate(calc(100% - 60px), 0);
-        transform: translate(calc(100% - 60px), 0);
-    }
+.book.with-summary .book-body {
+    left: var(--summary-width);
 }
 .book.without-animation .book-body {
     -webkit-transition: none !important;

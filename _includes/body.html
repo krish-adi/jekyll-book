@@ -1,13 +1,8 @@
-<div class="body-inner">    
+<div class="body-inner">
+    {%- include header.html -%}
     <div class="page-wrapper">
         <div class="page-inner">
-            <section class="normal markdown-section">
-                {% if page.title and page.title != 'index' %}
-                    <h1 id="{{ page.id }}">{{ page.title | escape }}</h1>                
-                {% endif %} 
-                
-                {{ content }}
-            </section>            
+            <section class="normal markdown-section">{{ content }}</section>
         </div>
     </div>
 </div>

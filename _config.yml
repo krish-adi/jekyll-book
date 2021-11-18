@@ -9,11 +9,17 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Adithya Krishnan
+title: krishadi
+author: Adithya Krishnan
 email: info@krishadi.com
-description: Blog of Adithya Krishnan. 
+tagline: Blog of Adithya Krishnan.
+description: Blog of Adithya Krishnan.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com, https://user.github.io
+url: "https://krishadi.com" # the base hostname & protocol for your site, e.g. http://example.com, https://user.github.io
+
+social_links:
+    twitter: krish_adi_
+    github: krish-adi
 
 # Build settings
 
@@ -25,4 +31,11 @@ exclude:
     - _archive
 
 plugins:
-  - jekyll-sitemap
+    - jekyll-sitemap
+    - jekyll-seo-tag
+    - jekyll-feed
+# To enable Google Analytics, fill in the following:
+# Google Analytics will only appear in production, i.e., `JEKYLL_ENV=production`
+
+# google_analytics: UA-NNNNNNNN-N
+

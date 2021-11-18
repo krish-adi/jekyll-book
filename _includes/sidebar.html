@@ -5,7 +5,7 @@
         <li class="divider"></li>
 
         <li class="chapter">
-            <a href="{{site.baseurl}}/index.html"> home </a>
+            <a href="{{site.baseurl}}/index.html"> Home </a>
         </li>
 
         <li class="divider"></li>
@@ -14,7 +14,7 @@
         category | first }}{% endcapture %}
 
         <li class="chapter">
-            <a href="{{site.baseurl}}/{{ category_name | slugize }}">
+            <a href="{{site.baseurl}}/{{ category_name | slugize }}" style="text-transform: capitalize;">
                 {{ category_name }}
             </a>
         </li>
@@ -22,5 +22,7 @@
         {% endfor %}
 
         <li class="divider"></li>
+
+        {%- include social.html -%}
     </ul>
 </div>

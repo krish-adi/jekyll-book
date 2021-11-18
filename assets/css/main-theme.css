@@ -1,3 +1,162 @@
-.book .book-body .page-inner section {
+/* Font theme */
+.book.font-family-serif {
+    font-family: Georgia, serif;
+}
+.book.font-family-sans {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.book.font-size-0 .book-body .page-inner section {
+    font-size: 1.2rem;
+}
+.book.font-size-1 .book-body .page-inner section {
+    font-size: 1.4rem;
+}
+.book.font-size-2 .book-body .page-inner section {
     font-size: 1.6rem;
+}
+.book.font-size-3 .book-body .page-inner section {
+    font-size: 2.2rem;
+}
+.book.font-size-4 .book-body .page-inner section {
+    font-size: 4rem;
+}
+/* .book .book-body .page-inner section {
+    font-size: 1.6rem;
+} */
+
+/* Dark mode theme */
+
+.dark-mode .dropdown-menu {
+    background-color: #2d3143;
+    border-color: #272a3a;
+}
+.dark-mode .dropdown-menu .dropdown-caret .caret-inner {
+    border-bottom: 9px solid #2d3143;
+}
+.dark-mode .dropdown-menu .buttons {
+    border-color: #272a3a;
+}
+.dark-mode .dropdown-menu .button {
+    color: #62677f;
+}
+.dark-mode .dropdown-menu .button:hover {
+    color: #f4f4f5;
+}
+.book.dark-mode .book-body {
+    color: #bdcadb;
+    background: #1c1f2b;
+}
+.book.dark-mode .book-body .page-wrapper .page-inner section {
+    background: #1c1f2b;
+}
+
+.book.dark-mode .book-body .page-wrapper .page-inner section.normal {
+    color: #bdcadb;
+}
+.book.dark-mode .book-body .page-wrapper .page-inner section.normal a {
+    color: #3eb1d0;
+}
+.book.dark-mode .book-body .page-wrapper .page-inner section.normal h1,
+.book.dark-mode .book-body .page-wrapper .page-inner section.normal h2,
+.book.dark-mode .book-body .page-wrapper .page-inner section.normal h3,
+.book.dark-mode .book-body .page-wrapper .page-inner section.normal h4,
+.book.dark-mode .book-body .page-wrapper .page-inner section.normal h5,
+.book.dark-mode .book-body .page-wrapper .page-inner section.normal h6 {
+    color: #fffffa;
+}
+.book.dark-mode .book-body .page-wrapper .page-inner section.normal h1,
+.book.dark-mode .book-body .page-wrapper .page-inner section.normal h2 {
+    border-color: #373b4e;
+}
+.book.dark-mode .book-body .page-wrapper .page-inner section.normal h6 {
+    color: #373b4e;
+}
+.book.dark-mode .book-body .page-wrapper .page-inner section.normal hr {
+    background-color: #373b4e;
+}
+.book.dark-mode .book-body .page-wrapper .page-inner section.normal blockquote {
+    border-color: #373b4e;
+}
+.book.dark-mode .book-body .page-wrapper .page-inner section.normal pre,
+.book.dark-mode .book-body .page-wrapper .page-inner section.normal code {
+    color: #9dbed8;
+    background: #2d3143;
+    border-color: #2d3143;
+}
+.book.dark-mode .book-body .page-wrapper .page-inner section.normal .highlight {
+    background-color: #282a39;
+}
+.book.dark-mode .book-body .page-wrapper .page-inner section.normal table th,
+.book.dark-mode .book-body .page-wrapper .page-inner section.normal table td {
+    border-color: #3b3f54;
+}
+.book.dark-mode .book-body .page-wrapper .page-inner section.normal table tr {
+    color: #b6c2d2;
+    background-color: #2d3143;
+    border-color: #3b3f54;
+}
+.book.dark-mode
+    .book-body
+    .page-wrapper
+    .page-inner
+    section.normal
+    table
+    tr:nth-child(2n) {
+    background-color: #35394b;
+}
+
+.book.dark-mode .book-header {
+    color: #7e888b;
+    background: transparent;
+}
+.book.dark-mode .book-header .btn {
+    color: #3b3f54;
+}
+.book.dark-mode .book-header .btn:hover {
+    color: #fffff5;
+    background: none;
+}
+.book.dark-mode .book-header h1 {
+    color: #bdcadb;
+}
+
+.book.dark-mode .book-body .navigation {
+    color: #383f52;
+}
+.book.dark-mode .book-body .navigation:hover {
+    color: #fffff5;
+}
+.book.dark-mode .book-summary {
+    color: #bcc1d2;
+    background: #2d3143;
+    border-right: none;
+}
+.book.dark-mode .book-summary .book-search {
+    background: transparent;
+}
+.book.dark-mode .book-summary .book-search input,
+.book.dark-mode .book-summary .book-search input:focus {
+    border: 1px solid transparent;
+}
+.book.dark-mode .book-summary ul.summary li.divider {
+    background: #272a3a;
+    box-shadow: none;
+}
+.book.dark-mode .book-summary ul.summary li i.fa-check {
+    color: #33cc33;
+}
+.book.dark-mode .book-summary ul.summary li.done > a {
+    color: #62687f;
+}
+.book.dark-mode .book-summary ul.summary li a,
+.book.dark-mode .book-summary ul.summary li span {
+    color: #c1c6d7;
+    background: transparent;
+    font-weight: 600;
+}
+.book.dark-mode .book-summary ul.summary li.active > a,
+.book.dark-mode .book-summary ul.summary li a:hover {
+    color: #f4f4f5;
+    background: #252737;
+    font-weight: 600;
 }

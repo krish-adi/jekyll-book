@@ -4,6 +4,8 @@ layout: default
 
 {% assign cat = page.category %}
 
+<h3 id="category" style="text-transform: capitalize;">{{ page.category }}</h3>
+
 {% for post in site.categories[cat] %}
 
 {%- if post.title != 'index' -%}
