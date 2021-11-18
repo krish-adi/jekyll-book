@@ -93,7 +93,7 @@ body {
 }
 .body-header .btn svg {
     height: 14px;
-    fill: #aaaaaa;
+    fill: #bbbbbb;
 }
 .body-header .btn svg:hover {
     fill: #333333;
@@ -136,6 +136,7 @@ body {
     transition: left 250ms ease;
 }
 .book-summary ul.summary {
+    position: relative;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -143,6 +144,20 @@ body {
     -moz-transition: top 0.5s ease;
     -o-transition: top 0.5s ease;
     transition: top 0.5s ease;
+}
+.book-summary ul.summary .close{
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    padding: 2px 5px;   
+    font-size: large;
+    background-color: #eeeeee;
+    border-radius: 2px;
+}
+@media (min-width: 769px) {
+    .book-summary ul.summary .close{
+        display: none;
+    }
 }
 .book-summary ul.summary li {
     list-style: none;

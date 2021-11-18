@@ -1,6 +1,7 @@
 <div class="book-summary">
     <ul class="summary">
-        <div style="height: 3em;"></div>        
+        <div onclick="toggleSidebar()" class="close"> &#215; </div>
+        <div style="height: 3em"></div>
         <li class="divider"></li>
         <li class="chapter">
             <a href="{{site.baseurl}}/index.html"> Home </a>
@@ -9,7 +10,10 @@
         {% for category in site.categories %}{% capture category_name %}{{
         category | first }}{% endcapture %}
         <li class="chapter">
-            <a href="{{site.baseurl}}/{{ category_name | slugize }}" style="text-transform: capitalize;">
+            <a
+                href="{{site.baseurl}}/{{ category_name | slugize }}"
+                style="text-transform: capitalize"
+            >
                 {{ category_name }}
             </a>
         </li>

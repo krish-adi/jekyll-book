@@ -20,12 +20,8 @@
 .book.font-size-4 .book-body .page-inner section {
     font-size: 4rem;
 }
-/* .book .book-body .page-inner section {
-    font-size: 1.6rem;
-} */
 
 /* Dark mode theme */
-
 .dark-mode .dropdown-menu {
     background-color: #2d3143;
     border-color: #272a3a;
@@ -159,4 +155,11 @@
     color: #f4f4f5;
     background: #252737;
     font-weight: 600;
+}
+.book.dark-mode .body-header .btn svg {
+    height: 14px;
+    fill: #666666;
+}
+.book.dark-mode .body-header .btn svg:hover {
+    fill: #dddddd;
 }
