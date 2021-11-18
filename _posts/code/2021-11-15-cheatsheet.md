@@ -1,6 +1,7 @@
 ---
-title: MD Cheat sheet
-date: 2019-04-30
+title: Markdown cheat sheet
+description: Markdown cheat sheet
+date: 2021-11-15
 category: code
 layout: default
 ---
@@ -59,7 +60,8 @@ These are the elements outlined in John Gruber’s original design document. All
 
 ### Image
 
-![alt text](image.jpg)
+![alt text](https://images.unsplash.com/photo-1462332420958-a05d1e002413?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2107&q=80)
+
 
 ## Extended Syntax
 
