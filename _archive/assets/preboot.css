@@ -225,7 +225,7 @@
 .dropdown-menu .buttons .button.size-3 {
     width: 33%;
 }
-.book-summary {
+/* .book-summary {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     position: absolute;
     top: 0;
@@ -400,7 +400,7 @@
     border-radius: 0;
     background: #eee;
     border: 0;
-}
+} */
 .buttons:after,
 .buttons:before {
     content: " ";
@@ -434,7 +434,7 @@
 .button.size-3 {
     width: 33%;
 }
-.markdown-section {
+/* .markdown-section {
     display: block;
     word-wrap: break-word;
     overflow: hidden;
@@ -670,7 +670,7 @@
 .markdown-section .glossary-term {
     cursor: help;
     text-decoration: underline;
-}
+} */
 .navigation {
     position: absolute;
     top: 50px;
@@ -714,7 +714,7 @@
         width: 100%;
     }
 }
-* {
+/* * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -746,4 +746,4 @@ body {
 }
 .book .book-body .page-inner section {
     font-size: 1.6rem;
-}
+} */
