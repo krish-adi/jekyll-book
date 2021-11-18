@@ -1,28 +1,20 @@
 <div class="book-summary">
     <ul class="summary">
-        <div style="height: 3em;"></div>
-        
+        <div style="height: 3em;"></div>        
         <li class="divider"></li>
-
         <li class="chapter">
             <a href="{{site.baseurl}}/index.html"> Home </a>
         </li>
-
         <li class="divider"></li>
-
         {% for category in site.categories %}{% capture category_name %}{{
         category | first }}{% endcapture %}
-
         <li class="chapter">
             <a href="{{site.baseurl}}/{{ category_name | slugize }}" style="text-transform: capitalize;">
                 {{ category_name }}
             </a>
         </li>
-
         {% endfor %}
-
         <li class="divider"></li>
-
         {%- include social.html -%}
     </ul>
 </div>

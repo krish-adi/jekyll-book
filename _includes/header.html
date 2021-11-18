@@ -1,4 +1,5 @@
 <div class="body-header">
+    <!-- toggle sidebar -->
     <a class="btn" onclick="toggleSidebar()">
         <svg x="0px" y="0px" viewBox="0 0 60 60">
             <rect x="0" width="60" height="6" />
@@ -8,6 +9,7 @@
             <rect x="0" y="48" width="60" height="6" />
         </svg>
     </a>
+    <!-- light/dark mode -->
     <a class="btn" onclick="toggleDarkmode()">
         <svg x="0px" y="0px" viewBox="0 0 95.9 95.9">
             <path
@@ -19,7 +21,7 @@
     <!-- sans/serif mode -->
     <a class="btn" onclick="toggleFontType()">
         <!-- serif mode -->
-        <svg x="0px" y="0px" viewBox="0 0 30 30">
+        <svg x="0px" y="0px" viewBox="0 0 30 30" id="serif-icon">
             <path
                 d="M1,27.4l3.6-0.5h0.7l3.9,0.5v1.5H1V27.4z M11.7,4.6H14l8.3,24.3h-3.5L11.6,7.4l0.9-0.1L5.1,28.8H3.4L11.7,4.6z M7.5,19.3
                h9.7l0.6,1.7H7L7.5,19.3z M14.6,27.4l4.5-0.5h0.8l4.5,0.5v1.5h-9.8V27.4z"
@@ -33,7 +35,7 @@
             />
         </svg>
         <!-- sans mode -->
-        <svg x="0px" y="0px" viewBox="0 0 30 30" style="display: none">
+        <svg x="0px" y="0px" viewBox="0 0 30 30" id="sans-icon">
             <path
                 d="M11,4.6h3.5l8.2,24.2h-3.3l-4.2-13.5c-0.8-2.7-1.6-5.3-2.5-8.2h-0.1c-0.7,2.8-1.5,5.4-2.4,8.2L5.9,28.9H2.8L11,4.6z
          M7.1,19.1h11.2v2.5H7.1V19.1z"
@@ -67,8 +69,8 @@
             />
         </svg>
     </a>
-
-    {% if page.title and page.title != 'index' %}
-    <span class="caption">{{ page.title | escape }}</span>
-    {% endif %}
+    <!-- reset local storage in dev env -->
+    {%- if jekyll.environment != 'production' -%}
+        <a class="btn" onclick="localStorage.clear()"> &#10226; </a>
+    {%- endif -%}
 </div>

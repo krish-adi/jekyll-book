@@ -33,15 +33,36 @@
             document
                 .getElementById("book")
                 .classList.toggle("font-family-serif");
+            document.getElementById("serif-icon").classList.add("display-none");
+            document
+                .getElementById("sans-icon")
+                .classList.remove("display-none");
+        } else {
+            document
+                .getElementById("serif-icon")
+                .classList.remove("display-none");
+            document.getElementById("sans-icon").classList.add("display-none");
         }
     } else {
         localStorage.fontType = "sans";
+        document.getElementById("serif-icon").classList.remove("display-none");
+        document.getElementById("sans-icon").classList.add("display-none");
     }
     function toggleFontType() {
         document.getElementById("book").classList.toggle("font-family-serif");
-        localStorage.fontType == "sans"
-            ? (localStorage.fontType = "serif")
-            : (localStorage.fontType = "sans");
+        if (localStorage.fontType == "sans") {
+            localStorage.fontType = "serif";
+            document
+                .getElementById("serif-icon")
+                .classList.add("display-none");
+            document.getElementById("sans-icon").classList.remove("display-none");
+        } else {
+            localStorage.fontType = "sans";
+            document.getElementById("serif-icon").classList.remove("display-none");
+            document
+                .getElementById("sans-icon")
+                .classList.add("display-none");
+        }
     }
     // Inc/Dec font size implementation
     if (localStorage.fontSize) {

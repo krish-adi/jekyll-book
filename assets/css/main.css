@@ -98,12 +98,6 @@ body {
 .body-header .btn svg:hover {
     fill: #333333;
 }
-.body-header .caption {
-    font-size: 20px;
-    font-weight: 200;
-    line-height: 50px;
-    padding-left: 100px;
-}
 .page-wrapper {
     position: relative;
     outline: 0;
@@ -228,4 +222,7 @@ body {
     -moz-transition: none !important;
     -o-transition: none !important;
     transition: none !important;
+}
+.display-none {
+    display: none;
 }
