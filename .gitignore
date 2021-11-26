@@ -1,3 +1,6 @@
+_drafts
+_drafts/
+
 _site
 .sass-cache
 .jekyll-cache
@@ -37,6 +40,9 @@ build-iPhoneSimulator/
 
 ## Specific to RubyMotion (use of CocoaPods):
 #
+_drafts
+_drafts/
+
 # We recommend against adding the Pods directory to your .gitignore. However
 # you should judge for yourself, the pros and cons are mentioned at:
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
@@ -47,6 +53,9 @@ build-iPhoneSimulator/
 /.yardoc/
 /_yardoc/
 /doc/
+_drafts
+_drafts/
+
 /rdoc/
 
 ## Environment normalization:
